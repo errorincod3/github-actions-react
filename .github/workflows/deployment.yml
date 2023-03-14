@@ -6,6 +6,8 @@ jobs:
     steps:
       - name: Get repository code
         uses: actions/checkout@v3
+      - name: Update
+        run: apt-update
       - name: Install dependecies
         run: npm ci
       - name: Test application
